@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+body {
+  padding: 50px 0;
+}
+.wrapper {
+  width: calc(100vw - 100px);
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 1400px;
+}
+.header_logo {
+  width: 75%;
+}
+.logo_text {
+  width: auto;
+  margin-left: 3%;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+.header_favorites {
+  margin-left: auto;
+}
+.content {
+  margin-top: 50px;
+}
+.header_favorites a {
+  margin-top: 7%;
+}
+.right_border {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #007bff;
+}
+.category_name {
+  font-weight: bold;
+  font-size: 24px;
+}
+ul.categories {
+  margin-top: 5px;
+}
+ul.categories li {
+  display: inline;
+  margin-right: 5px;
+}
+.sort {
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+}
+.sort_label {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.sort_name {
+  font-size: 20px;
+  color: #007bff;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sort_popup {
+  position: absolute;
+  border: 1px solid #007bff;
+  background-color: #f4f9ff;
+  border-radius: 10px;
+  margin: 5px;
+  right: 0;
+}
+.sort_popup ul {
+  margin: 1rem;
+  padding-left: 0;
+  text-align: center;
+}
+.sort_popup ul li {
+  display: block;
+}
+.content_items {
+  margin-top: 50px;
+}
+.book_block {
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+}
+.book_block_image {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50vh;
+}
+.book_block_author {
+  font-size: 20px;
+}
+.book_block_year {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.rating {
+  margin-bottom: 5px;
+}
+.rating span {
+  margin: 5px;
+}
+
+.fav_item {
+  padding: 20px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.image2 {
+  height: 218px;
+}
+.fav_item_info {
+  margin-top: 50px;
+}
+.fav_item_remove {
+  margin-top: 80px;
+}
+.empty {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.to_main {
+  margin-left: 46%;
+}

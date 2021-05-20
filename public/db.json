@@ -1,0 +1,59 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "imageUrl": "http://www.astrel-spb.ru/images/stories/virtuemart/product/58bdfcf616c170c16b39ddcbfd6faf56.jpg",
+      "name": "Я с ней дружу",
+      "author": "Барто Агния",
+      "year": 2015,
+      "rating": 3,
+      "categoryPublish": 0,
+      "categoryAuthor": 0,
+      "categoryYear": 2
+    },
+    {
+        "id": 1,
+        "imageUrl": "https://cdn.eksmo.ru/v2/ITD000000001105239/COVER/cover1__w820.jpg",
+        "name": "451 по Фаренгейту",
+        "author": "Брэдбери Рэй",
+        "year": 2019,
+        "rating": 3,
+        "categoryPublish": 1,
+        "categoryAuthor": 1,
+        "categoryYear": 0
+    },
+    {
+        "id": 2,
+        "imageUrl": "https://cdn.eksmo.ru/v2/ITD000000001118309/COVER/cover1__w820.jpg",
+        "name": "1984",
+        "author": "Оруэлл Джордж",
+        "year": 2013,
+        "rating": 3,
+        "categoryPublish": 1,
+        "categoryAuthor": 2,
+        "categoryYear": 3
+    },
+    {
+        "id": 3,
+        "imageUrl": "https://cdn.eksmo.ru/v2/ITD000000001156627/COVER/cover1__w820.jpg",
+        "name": "Капитанская дочка",
+        "author": "Пушкин Александр",
+        "year": 2017,
+        "rating": 3,
+        "categoryPublish": 1,
+        "categoryAuthor": 3,
+        "categoryYear": 1
+    },
+    {
+        "id": 4,
+        "imageUrl": "https://cdn.eksmo.ru/v2/ITD000000001057786/COVER/cover1__w820.jpg",
+        "name": "Анна Каренина",
+        "author": "Толстой Лев",
+        "year": 2011,
+        "rating": 3,
+        "categoryPublish": 1,
+        "categoryAuthor": 4,
+        "categoryYear": 4
+    }
+  ]
+}
