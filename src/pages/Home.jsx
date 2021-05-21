@@ -22,6 +22,8 @@ function Home() {
   const dispatch = useDispatch();
   const items = useSelector(({books}) => books.items);
   const favoriteItems = useSelector(({favorites}) => favorites.items);
+  const uppedItems = useSelector(({ratings}) => ratings.upItems);
+  const downedItems = useSelector(({ratings}) => ratings.downItems);
   const isLoaded = useSelector(({books}) => books.isLoaded);
   const {categoryPublish, categoryAuthor, categoryYear, searchQuery, sortBy} = useSelector(({filters}) => filters);
 
@@ -55,6 +57,19 @@ function Home() {
         payload: obj,
     });
   };
+  const handleUpRating = (obj) => {
+    dispatch({
+        type: 'UP_RATING',
+        payload: obj,
+    });
+  };
+  const handleDownRating = (obj) => {
+    dispatch({
+        type: 'DOWN_RATING',
+        payload: obj,
+    });
+  };
+  console.log(uppedItems, downedItems);
     return (
         <div className="container">
         <div className="content_top d-flex flex-row justify-content-between">
@@ -68,7 +83,7 @@ function Home() {
         <Search value={searchQuery} onChange={e => onSearch(e.target.value)}>Поиск</Search>
         <div className="content_items d-flex flex-row flex-wrap justify-content-around">
           {isLoaded ? items.map((obj) => (
-            <BookBlock added={favoriteItems[obj.id]} onClickAddBook={handleAddBookToFavorites} key={obj.id} isLoading={true} {...obj} />
+            <BookBlock added={favoriteItems[obj.id]} upped={uppedItems[obj.id]} downed={downedItems[obj.id]} onClickUpRating={handleUpRating} onClickDownRating={handleDownRating} onClickAddBook={handleAddBookToFavorites} key={obj.id} isLoading={true} {...obj} />
           )) : Array(10).fill(0).map((_, index) => <BookLoadingBlock key={index} />)}
         </div>
       </div>

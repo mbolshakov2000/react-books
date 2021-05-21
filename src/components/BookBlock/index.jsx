@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import Button from '../Button';
 
-function BookBlock({ id, name, imageUrl, author , year, onClickAddBook, added }) {
+function BookBlock({ id, name, imageUrl, author, rating, year, onClickAddBook, onClickUpRating, onClickDownRating, upped, downed, added }) {
     
-    const [activeRating, setActiveRating] = React.useState(3);
+    // const [activeRating, setActiveRating] = React.useState(3);
 
-    const onSelectRating = (index) => {
-        setActiveRating(index);
-    }
+    // const onSelectRating = (index) => {
+    //     setActiveRating(index);
+    // }
     const onAddBook = () => {
         const obj = {
             id,
@@ -17,9 +17,23 @@ function BookBlock({ id, name, imageUrl, author , year, onClickAddBook, added })
             imageUrl,
             author,
             year,
-            rating: activeRating
+            rating,
         };
         onClickAddBook(obj);
+    };
+    const onUpRating = () => {
+        const obj = {
+            id,
+            rating
+        };
+        onClickUpRating(obj);
+    };
+    const onDownRating = () => {
+        const obj = {
+            id,
+            rating
+        };
+        onClickDownRating(obj);
     };
     return (
         <div className="book_block col-3">
@@ -34,8 +48,8 @@ function BookBlock({ id, name, imageUrl, author , year, onClickAddBook, added })
                 <div className="book_block_year">{year}</div>
                 <div className="rating">
                     <span className="book_block_author">Оценить</span>
-                    <span onClick={() => onSelectRating('0')} className={activeRating === '0' ? 'btn btn-outline-primary active' : 'btn btn-outline-primary'}><i className="fa fa-minus"></i></span>
-                    <span onClick={() => onSelectRating('1')} className={activeRating === '1' ? 'btn btn-outline-primary active' : 'btn btn-outline-primary'}><i className="fa fa-plus"></i></span>
+                    <Button onClick={onUpRating} className={upped !== undefined ? 'btn btn-outline-primary active' : 'btn btn-outline-primary'}><i className="fa fa-minus"></i></Button>
+                    <Button onClick={onDownRating} className={downed !== undefined ? 'btn btn-outline-primary active' : 'btn btn-outline-primary'}><i className="fa fa-plus"></i></Button>
                     <Button onClick={onAddBook} className={added !== undefined ? 'btn btn-outline-primary active' : 'btn btn-outline-primary'}>{added !== undefined ? 'В избранном' : 'В избранное'}</Button>
                 </div>
 
